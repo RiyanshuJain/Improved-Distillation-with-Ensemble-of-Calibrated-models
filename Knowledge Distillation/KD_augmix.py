@@ -207,7 +207,6 @@ for epoch in range(epochs):
         optimiser_simple.step()
         progress.update(1)
     
-
     print("\nTrain_loss : ",losses.avg)
     ece, oe, bin_acc, bin_conf, acc, bin_count = compute_calibration_metrics(num_bins=NUM_BINS, net=model_s, loader=test_loader)
     
